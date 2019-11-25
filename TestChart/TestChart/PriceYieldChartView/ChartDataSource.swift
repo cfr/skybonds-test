@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 typealias ChartISIN = String
 
 enum DateRange: Int, CaseIterable {

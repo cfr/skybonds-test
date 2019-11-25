@@ -10,28 +10,33 @@ import XCTest
 @testable import TestChart
 
 class TestChartTests: XCTestCase {
-    
+
     let range = DateRange.allCases.randomElement()!
     var sample: [Markerable]!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        sample = RandomDataSource().sampleOf(isin: "TEST", type: .price, in: range)
+        sample = RandomDataSource(size: 1000).sampleOf(isin: "TEST", type: .price,
+                                                       in: range)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testSampleInRect() {
         let rect = CGRect.randomRect()
         let pointsInRect = sample.mapTo(rect: rect)
         for p in pointsInRect {
-            let contains = rect.contains(p)
-            XCTAssert(contains)
+            XCTAssert(rect.contains(p))
         }
     }
-    
+
+    func testMinMax() {
+        let values = sample.map { $0.value }
+        let (min, max) = (values.min()!, values.max()!)
+        XCTAssert(sample.max == max)
+        XCTAssert(sample.min == min)
+    }
+
     // ...
 
 //    func testPerformanceExample() {

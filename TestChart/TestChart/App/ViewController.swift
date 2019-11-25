@@ -9,17 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var randomSource = RandomDataSource()
+
+    private var randomSource = RandomDataSource() // TODO: inject source
     @IBOutlet var chart: PriceYieldChartView?
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
         chart?.dataSource = randomSource
         chart?.chartISIN = "ETH-USD"
-        // Do any additional setup after loading the view.
     }
 
-
 }
-

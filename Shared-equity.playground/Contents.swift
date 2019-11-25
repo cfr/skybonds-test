@@ -6,17 +6,16 @@ let shares = ["1.5", "3", "6", "1.5"]
    2N memory: n+1 doubles (8 bytes), n strings (~8 bytes)
  */
 func percents3f(from shares: [String]) -> [String] {
-    
+
     let ss = shares.map { Double($0) ?? 0.0 }
     let sum = ss.reduce(0.0) { $0 + $1 }
-    
+
     guard sum > 0 else { return [] }
-    
+
     return ss.map { String(format: "%.3f", $0 / (sum/100.0)) }
 }
 
 print(percents3f(from: shares))
-
 
 /*
  1. Долевое строительство
