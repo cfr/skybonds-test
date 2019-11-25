@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PriceYieldChartView" customModule="TestChart" customModuleProvider="target">
+            <connections>
+                <outlet property="chartingView" destination="e5Q-PR-6KD" id="goo-tl-kTx"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="j8C-z7-Wh9"/>
+                <outlet property="expand" destination="rbc-46-qfl" id="Zio-S8-rP5"/>
+                <outlet property="rangeButtons" destination="Zi6-6V-3Z4" id="Dgr-gj-USR"/>
+                <outlet property="switchType" destination="S9l-hE-sVg" id="hpr-88-jRn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="534" height="346"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5Q-PR-6KD" userLabel="chartingView" customClass="ChartingView" customModule="TestChart" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="534" height="301"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbc-46-qfl">
+                    <rect key="frame" x="481" y="18" width="37" height="23"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="xEj-fF-erq"/>
+                        <constraint firstAttribute="height" constant="23" id="yLD-JW-qfH"/>
+                    </constraints>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" image="baseline_compare_arrows_black_36pt">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9l-hE-sVg">
+                    <rect key="frame" x="16" y="18" width="100" height="23"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="9vj-Dg-VbB"/>
+                        <constraint firstAttribute="height" constant="23" id="eSO-8C-QCf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <inset key="titleEdgeInsets" minX="-70" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="PRICE" image="baseline_expand_more_black_36pt">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zi6-6V-3Z4">
+                    <rect key="frame" x="0.0" y="301" width="534" height="45"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rbc-46-qfl" secondAttribute="trailing" constant="16" id="16G-bZ-dvv"/>
+                <constraint firstItem="Zi6-6V-3Z4" firstAttribute="top" secondItem="e5Q-PR-6KD" secondAttribute="bottom" id="1nM-ds-6cK"/>
+                <constraint firstItem="S9l-hE-sVg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Cn5-ba-Zra"/>
+                <constraint firstItem="e5Q-PR-6KD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="V4t-im-K1P"/>
+                <constraint firstItem="e5Q-PR-6KD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZZi-De-Z12"/>
+                <constraint firstItem="rbc-46-qfl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="aAy-hJ-fjt"/>
+                <constraint firstItem="S9l-hE-sVg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="bBZ-qR-nej"/>
+                <constraint firstAttribute="bottom" secondItem="Zi6-6V-3Z4" secondAttribute="bottom" id="bLO-lX-eej"/>
+                <constraint firstItem="Zi6-6V-3Z4" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.13" id="btt-Bz-lTw"/>
+                <constraint firstItem="e5Q-PR-6KD" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="jJI-qn-pbW"/>
+                <constraint firstItem="Zi6-6V-3Z4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vii-ud-AJy"/>
+                <constraint firstItem="Zi6-6V-3Z4" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="wpe-xH-dId"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-215.94202898550725" y="-89.0625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="baseline_compare_arrows_black_36pt" width="36" height="36"/>
+        <image name="baseline_expand_more_black_36pt" width="36" height="36"/>
+    </resources>
+</document>
